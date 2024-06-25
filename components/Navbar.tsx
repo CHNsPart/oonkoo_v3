@@ -33,7 +33,7 @@ export function Navbar() {
     },
   ];
   return (
-    <div className="relative w-full">
+    <div className="w-full flex justify-center">
       <FloatingNav navItems={navItems} />
     </div>
   );

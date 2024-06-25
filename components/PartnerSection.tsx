@@ -78,7 +78,7 @@ const PartnerSection = () => {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-[#1F1C1C] py-20">
       <div className="w-full flex justify-center items-center pb-10">
-        <SparklesText text="Our Trusted Partners" /> 
+        <SparklesText className="text-center" text="Our Trusted Partners" /> 
       </div>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (

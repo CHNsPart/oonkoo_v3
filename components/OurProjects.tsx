@@ -7,96 +7,102 @@ export function OurProjects() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "GTA Group",
+    link: "https://gta-group.pages.dev/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "/projects/GTAGroup.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "AD-IQ Admin Panel",
+    link: "https://www.behance.net/gallery/180955839/Admin-Panel-Dashboard?isa0=1&log_shim_removal=1",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "/projects/project-11.png",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "Broker Status",
+    link: "https://brokerstatus-client.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "/projects/brokerstatus.png",
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "Tilex E-Commerce",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfmVHVUlLbnR1alBqeWhHMW5CVE5SQ04taVpPaVdTS05hTEYwb3dHWDBoTTQ?resourcekey=0-f1QTm3ueCfblMdoAc8Axng",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      "/projects/Project-3.png",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "SDI HR Automation",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfnVlTXkwYlIyQTFwZkNnNHBtaGdhVFVDZzlXR082OGZOejJFSXAtXzlCdEU?resourcekey=0-lY7o6RqUGyDQF0F0s0ihkg",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      "/projects/project-4.png",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "Ban Base",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfnlCd1dhSV9sUC1CUUVkQWc2VEhPXzJNOTNBZUFSV3BISDFLUWRHXzd3b1U?resourcekey=0-IhgFlCt2SoRt4xF4gqdeAA",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+      "/projects/project-5.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Secure Nest",
+    link: "https://secure-nest.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      "/projects/secure_nest.png",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "3 Zero Club",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfnpsV2NDcWMzNlpvemc4WU9BTS1ZN1VuVWh0TzFUWlB5alEwc2pWdXA3WVE?resourcekey=0-BrE7FHZnw8i-RInbhWq9Ig",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      "/projects/3zeroclub.png",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "AD-IQ App",
+    link: "https://www.behance.net/gallery/125571951/Dashboard-UI-of-DD-AD",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      "/projects/project-8.jpg",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "ADIQ Primitive",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfnE4bVcyVzVWdUdMVmhpVjhKNnJCa2RfRXpDOEJFY0JuV1BRaUpBT05nc0E?resourcekey=0-weNzOxZW3HN06OisWdoWXw",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/projects/ADIQ-Primitive.png",
+  },
+  {
+    title: "AD-IQ System",
+    link: "https://www.behance.net/gallery/125571951/Dashboard-UI-of-DD-AD",
+    thumbnail:
+      "/projects/project-7.png",
+  },
+
+  {
+    title: "AD-IQ Listing",
+    link: "https://www.behance.net/gallery/123426619/AD-IQ-Listing-Website",
+    thumbnail:
+      "/projects/project-6.png",
+  },
+  {
+    title: "Medical Prone",
+    link: "https://medical-prone.vercel.app/",
+    thumbnail:
+      "/projects/project-1.png",
+  },
+  {
+    title: "YY Studio",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVfkFYYTJvTktZT2pTUXl0SEFmdmpwbDFwUzdQNTFRZXA3bWVjbFloaG91Y0U?resourcekey=0-qtlk0G9Bx8zAyOkvdP8zlQ",
+    thumbnail:
+      "/projects/Project-9.png",
+  },
+  {
+    title: "Yunus Centre",
+    link: "https://drive.google.com/drive/folders/0B9wf2qK3ELWVflZBZFc1RE5NZVVZckRvdk80WUlrYjYtSUNEenpYbzVOMnFIRmYtdDNocUE?resourcekey=0-wKQNgEfXgFjE6XoO0SSGvg",
+    thumbnail:
+      "/projects/project-10.png",
+  },
+  {
+    title: "Mindshare",
+    link: "https://www.behance.net/gallery/122890405/MindShare-Billboard-System-UIUX",
+    thumbnail:
+      "/projects/project-2.png",
   },
 ];

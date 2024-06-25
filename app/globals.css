@@ -51,8 +51,43 @@
   
   body{
     background-color: #1F1C1C;
+    overflow-x: hidden;
   }
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  scroll-bar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 2px;
+  }
+  scrollbar-track {
+    background: none;
+    border-radius: 2px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3CB371;
+    border-radius: 0 0 100% 100%;
+  }
+  scrollbar-thumb {
+    background: #3CB371;
+    border-radius: 0 0 100% 100%;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  scrollbar-thumb:hover {
+    background: #555;
+  }
 
   @layer base {
     * {

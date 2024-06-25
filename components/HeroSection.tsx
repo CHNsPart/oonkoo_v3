@@ -14,9 +14,10 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen w-full bg-[#1F1C1C] relative flex flex-col items-center justify-center antialiased">
         <div className="relative z-20 h-[40rem] flex flex-col justify-center items-center px-4 gap-5">
-          <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+          <div className="text-2xl md:text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
             Build
-            <FlipWords words={words} /> <br />
+            <FlipWords words={words} /> 
+            <br />
               with Oonkoo and watch your ideas come to life
           </div>
           <div className='w-full flex flex-col md:flex-row justify-start items-start md:items-center gap-2'>
