@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
               </svg>
             </a>
-            <a className="ml-3 text-primary" href="https://www.linkedin.com/company/oonkoo/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+            <a className="ml-3 text-primary" href="https://www.linkedin.com/company/oonkoo/" target="_blank" rel="noopener noreferrer">
               <svg
                 fill="currentColor"
                 stroke="currentColor"
