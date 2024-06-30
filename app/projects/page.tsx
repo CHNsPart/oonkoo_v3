@@ -29,8 +29,8 @@ const Projects = () => {
           <div className="h-[40rem] w-fit flex items-center justify-center ">
           
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="Tweet OonkoO"
+              href="https://twitter.com/oonkoohq"
             >
               <div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2 w-[20rem] h-[20rem] ">
                 <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-white">
