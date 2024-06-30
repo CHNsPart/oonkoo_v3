@@ -16,7 +16,7 @@ export function Navbar() {
     },
     {
       name: "Projects",
-      link: "/",
+      link: "/projects",
       icon: <IconMilitaryAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {

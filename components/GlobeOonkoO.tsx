@@ -3,6 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { Button } from "./ui/button";
+import Link from "next/link";
+import Particles from "./magicui/particles";
+import Footer from "./Footer";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -397,6 +400,13 @@ export function GlobeOonkoO() {
 
   return (
     <div className="flex flex-row items-center justify-center py-20 min-h-screen md:h-auto bg-[#1F1C1C] relative w-full">
+      <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] sm:h-[20rem] px-4">
         <motion.div
           initial={{
@@ -419,10 +429,10 @@ export function GlobeOonkoO() {
             Where Global Talent Meets Passionate Innovation
           </p>
           <div className="relative z-20 cursor-pointer w-full text-center my-5 mb-48 md:mb-0">
-            <button className="px-4 py-2 transition-all ease-in duration-200 cursor-pointer backdrop-blur-sm border bg-emerald-300/10 hover:bg-emerald-300/30 border-emerald-500/20 text-white text-center rounded-full relative">
+            <Link target='_blank' href={"#tally-open=mKo7kz&tally-hide-title=1&tally-emoji-text=👽&tally-emoji-animation=bounce"} className="px-4 py-2 transition-all ease-in duration-200 cursor-pointer backdrop-blur-sm border bg-emerald-300/10 hover:bg-emerald-300/30 border-emerald-500/20 text-white text-center rounded-full relative">
               <span>{"Let's Have a Chat →"}</span>
               <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-            </button>         
+            </Link>         
           </div>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-[#1F1C1C] z-40" />
@@ -430,6 +440,7 @@ export function GlobeOonkoO() {
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

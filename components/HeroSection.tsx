@@ -2,6 +2,7 @@ import React from 'react'
 import { FlipWords } from './ui/flip-words'
 import { BackgroundBeams } from './ui/background-beams';
 import AvatarCircles from './magicui/avatar-circles';
+import Link from 'next/link';
 
 export default function HeroSection() {
   const words = ["websites", "apps", "UI", "e-commerce"];
@@ -25,10 +26,10 @@ export default function HeroSection() {
             <p className='text-gray-500 font-light'>Developers & Designers around the globe.</p>
           </div>
           <div className='w-full flex justify-start'>
-            <button className="px-4 py-2 transition-all ease-in duration-200 cursor-pointer backdrop-blur-sm border bg-emerald-300/10 hover:bg-emerald-300/30 border-emerald-500/20 text-white text-center rounded-full relative">
+            <Link target='_blank' href={"#tally-open=mKo7kz&tally-hide-title=1&tally-emoji-text=👽&tally-emoji-animation=bounce"} className="px-4 py-2 transition-all ease-in duration-200 cursor-pointer backdrop-blur-sm border bg-emerald-300/10 hover:bg-emerald-300/30 border-emerald-500/20 text-white text-center rounded-full relative">
               <span>{"Let's Have a Chat →"}</span>
               <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-            </button>
+            </Link>
           </div>
         </div>
         <BackgroundBeams />
