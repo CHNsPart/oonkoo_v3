@@ -23,7 +23,7 @@ export default function Home() {
               <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
             </svg>
           </span>
-          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-2/4 mx-auto from-transparent via-emerald-500 to-transparent" />
         </Link>
       <Navbar/>
       <HeroSection/>

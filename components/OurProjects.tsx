@@ -3,9 +3,9 @@ import React from "react";
 import { HeroParallax } from "./ui/hero-parallax";
 
 export function OurProjects() {
-  return <HeroParallax products={products} />;
+  return <HeroParallax products={projects} />;
 }
-export const products = [
+export const projects = [
   {
     title: "GTA Group",
     link: "https://gta-group.pages.dev/",
