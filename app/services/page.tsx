@@ -3,6 +3,7 @@ import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeamMultipl
 import Footer from '@/components/Footer';
 import RetroGrid from '@/components/magicui/RetroGrid'
 import { Navbar } from '@/components/Navbar'
+import ServiceCTA from '@/components/ServiceCTA';
 import { ServicesTrace } from '@/components/ServicesTrace';
 import ServicesSection from '@/components/ui/bg-overlay-card';
 import React from 'react'
@@ -52,6 +53,9 @@ export default function page() {
             </div>
             <div className='mb-24 mt-10'>
              <ServicesSection/>
+            </div>
+            <div className='mb-24 mt-10'>
+                <ServiceCTA />
             </div>
             <Footer/>
         </section>
