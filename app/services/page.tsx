@@ -1,8 +1,10 @@
+"use client"
 import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeamMultipleOutputDemo';
 import Footer from '@/components/Footer';
 import RetroGrid from '@/components/magicui/RetroGrid'
 import { Navbar } from '@/components/Navbar'
 import { ServicesTrace } from '@/components/ServicesTrace';
+import ServicesSection from '@/components/ui/bg-overlay-card';
 import React from 'react'
 
 export default function page() {
@@ -47,6 +49,9 @@ export default function page() {
             </div>
             <div className='py-10'>
                 <ServicesTrace/>
+            </div>
+            <div className='mb-24 mt-10'>
+             <ServicesSection/>
             </div>
             <Footer/>
         </section>
