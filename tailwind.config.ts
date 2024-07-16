@@ -82,8 +82,13 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
+        grid: "grid 15s linear infinite",
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
