@@ -62,7 +62,7 @@ export default function Innovation() {
         "git",
         "jira",
         "github",
-        "androidstudio",
+        "android",
         "figma",
       ];
       const avatarUrls = [
@@ -79,10 +79,10 @@ export default function Innovation() {
         </div>
 
         <div className="relative z-20 h-[30rem] md:h-[40rem] flex flex-col justify-center items-center text-center md:text-left px-4 gap-5">
-          <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+          <div className="text-4xl md:text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
             With our extensive expertise in
             <br className='block lg:hidden' /> 
-            <FlipWords className='md:max-w-sm' words={words} /> <br />
+            <FlipWords className='text-xl my-2 md:my-0 md:text-4xl md:max-w-sm' words={words} /> <br />
               we deliver sophisticated and efficient solutions.
           </div>
           <div className='w-full flex flex-col md:flex-row justify-center md:justify-start items-center gap-2'>

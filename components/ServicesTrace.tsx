@@ -1,9 +1,326 @@
-import React from 'react'
+"use client";
+import React from "react";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
+import { TracingBeam } from "../components/ui/tracing-beam";
+import { IconBrandTabler, IconGeometry, IconAppWindow, IconCodeCircle2, IconShoppingBag, IconBoxMargin, IconSeo, IconBrandNextjs } from "@tabler/icons-react";
 
-function ServicesTrace() {
+export function ServicesTrace() {
   return (
-    <div>ServicesTrace</div>
-  )
+    <TracingBeam className="px-10 md:px-6">
+      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+        {servicesContent.map((item, index) => (
+          <div key={`content-${index}`} className="mb-10">
+            <h2 className="bg-white/10 text-white rounded-full text-2xl w-fit px-2 py-2 mb-4">
+              {item.badge}
+            </h2>
+
+            <p className={twMerge("text-xl mb-4 text-primary font-bold")}>
+              {item.title}
+            </p>
+
+            <div className="text-sm text-white/50 prose prose-sm">
+              {item?.image && (
+                <Image
+                  src={item.image}
+                  alt="blog thumbnail"
+                  height="1000"
+                  width="1000"
+                  className="rounded-lg mb-10 object-cover"
+                />
+              )}
+              {item.description}
+            </div>
+          </div>
+        ))}
+      </div>
+    </TracingBeam>
+  );
 }
 
-export default ServicesTrace
+const servicesContent = [
+    {
+      title: "Software Development",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Building robust and scalable software solutions.
+          </p>
+          <p className="text-base my-2">
+            Our software development team creates custom solutions tailored to your business requirements, ensuring functionality and scalability.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              What We Offer:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Custom software solutions</li>
+              <li>Scalable architecture</li>
+              <li>Ongoing support and maintenance</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconBrandTabler/>,
+      image: "",
+    },
+    {
+      title: "App Development",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Innovative and user-friendly mobile applications.
+          </p>
+          <p className="text-base my-2">
+            We specialize in developing mobile applications that are both intuitive and powerful, providing a seamless user experience.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Key Features:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Native and cross-platform apps</li>
+              <li>User-centric design</li>
+              <li>Performance optimization</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconCodeCircle2/>,
+      image: "",
+    },
+    {
+      title: "UI/UX Design",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Crafting engaging and intuitive designs.
+          </p>
+          <p className="text-base my-2">
+            Our UI/UX design team focuses on creating interfaces that are not only beautiful but also highly functional and user-friendly.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Our Approach:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>User research and testing</li>
+              <li>Wireframing and prototyping</li>
+              <li>Interactive design</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconGeometry/>,
+      image: "",
+    },
+    {
+      title: "Web Development",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Developing dynamic and responsive websites.
+          </p>
+          <p className="text-base my-2">
+            We create websites that are visually appealing and functionally robust, ensuring a strong online presence for your business.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Services Include:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Responsive web design</li>
+              <li>E-commerce solutions</li>
+              <li>Content management systems</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconBrandNextjs/>,
+      image: "",
+    },
+    {
+      title: "E-commerce Solutions",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Boost your sales with seamless online platforms.
+          </p>
+          <p className="text-base my-2">
+            Our e-commerce solutions are designed to provide a secure and efficient shopping experience for your customers.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Our Offerings:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Custom e-commerce platforms</li>
+              <li>Payment gateway integration</li>
+              <li>Inventory management</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconShoppingBag/>,
+      image: "",
+    },
+    {
+      title: "Brand & Content Creation",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Developing compelling brand stories and content.
+          </p>
+          <p className="text-base my-2">
+            We help you create a strong brand identity and engaging content that resonates with your audience.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Services Provided:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Brand strategy and identity</li>
+              <li>Content creation and management</li>
+              <li>Social media marketing</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconBoxMargin/>,
+      image: "",
+    },
+    {
+      title: "SEO Optimization",
+      description: (
+        <>
+          <p className="text-lg text-white">
+            Enhancing your online visibility and search rankings.
+          </p>
+          <p className="text-base my-2">
+            Our SEO experts ensure that your website ranks high in search results, driving more traffic to your site.
+          </p>
+          <span className="mt-2">
+            <span className="text-primary font-bold">
+              Our SEO Services:
+            </span>
+            <ul className="list-disc pl-4 mt-2">
+              <li>Keyword research and strategy</li>
+              <li>On-page and off-page optimization</li>
+              <li>Analytics and reporting</li>
+            </ul>
+          </span>
+        </>
+      ),
+      badge: <IconSeo/>,
+      image: "",
+    },
+  ];
+  
+
+
+  const servicesRoot = [
+    {
+      title: "From Concept to Completion",
+      description: (
+        <>
+          <p className="text-lg text-white">
+              Collaborate and succeed with Oonkoo.
+          </p>
+          <p className="text-base my-2">
+              Our approach ensures every project exceeds your expectations from start to finish.
+          </p>
+          <p className="mt-2">
+              <span className="text-primary font-bold">
+                  Our Promise:
+              </span>
+              <ul className="list-disc pl-4 mt-2">
+                  <li>Transparent communication</li>
+                  <li>Collaborative process</li>
+                  <li>Excellence in execution</li>
+              </ul>
+          </p>
+        </>
+      ),
+      badge: "🎯",
+      image:
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Leveraging the Latest Technologies",
+      description: (
+        <>
+          <p className="text-lg text-white">
+              Innovative solutions for sustainable success.
+          </p>
+          <p className="text-base my-2">
+              We use cutting-edge technologies to build sustainable and efficient systems that drive your business forward.
+          </p>
+          <p className="mt-2">
+              <span className="text-primary font-bold">
+                  Key Features:
+              </span>
+              <ul className="list-disc pl-4 mt-2">
+                  <li>Advanced technology adoption</li>
+                  <li>Focus on sustainability</li>
+                  <li>Future-proof solutions</li>
+              </ul>
+          </p>
+        </>
+      ),
+      badge: "🤖",
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Transforming Visions into Reality",
+      description: (
+        <>
+          <p className="text-lg text-white">
+              Turn your ideas into impactful software and design solutions.
+          </p>
+          <p className="text-base my-2">
+              We help businesses achieve success with innovative and user-centric software and design.
+          </p>
+          <p className="mt-2">
+              <span className="text-primary font-bold">
+                  What We Offer:
+              </span>
+              <ul className="list-disc pl-4 mt-2">
+                  <li>Custom software development</li>
+                  <li>User-centered design</li>
+                  <li>Comprehensive project management</li>
+              </ul>
+          </p>
+        </>
+      ),
+      badge: "🌱",
+      image:
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Excellence in Every Project",
+      description: (
+        <>
+          <p className="text-lg text-white">
+              Partner with Oonkoo for unparalleled IT solutions.
+          </p>
+          <p className="text-base my-2">
+              Our commitment to excellence ensures your success with world-class IT services tailored to your needs.
+          </p>
+          <p className="mt-2">
+              <span className="text-primary font-bold">
+                  Our Excellence Includes:
+              </span>
+              <ul className="list-disc pl-4 mt-2">
+                  <li>High-quality standards</li>
+                  <li>Continuous improvement</li>
+                  <li>Client satisfaction guaranteed</li>
+              </ul>
+          </p>
+        </>
+      ),
+      badge: "✨",
+      image:
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];

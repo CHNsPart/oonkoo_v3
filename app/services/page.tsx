@@ -1,6 +1,8 @@
 import { AnimatedBeamMultipleOutputDemo } from '@/components/AnimatedBeamMultipleOutputDemo';
+import Footer from '@/components/Footer';
 import RetroGrid from '@/components/magicui/RetroGrid'
 import { Navbar } from '@/components/Navbar'
+import { ServicesTrace } from '@/components/ServicesTrace';
 import React from 'react'
 
 export default function page() {
@@ -12,15 +14,15 @@ export default function page() {
     ];
 
     return (
-        <section className="min-h-screen w-full bg-[#1F1C1C] relative flex flex-col items-center justify-start antialiased pt-36 md:p-10">
+        <section className="h-full w-full bg-[#1F1C1C] relative flex flex-col items-center justify-start antialiased py-36 md:p-10">
             <Navbar />
             <div className="container relative flex h-screen w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-lg bg-[#1F1C1C]">
-                <div className='flex flex-col items-center text-center justify-center gap-2'>
-                    <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-emerald-200 via-primary to-emerald-800 bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
+                <div className='flex flex-col items-center text-center justify-center gap-4 md:gap-2'>
+                    <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-emerald-200 via-primary to-emerald-800 bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent">
                         Global Talent, Local Impact
                     </span>
-                    <p className='text-white font-bold text-lg leading-loose'>Unlock world-class IT solutions tailored to your business needs.</p>
-                    <p className='text-white/50 text-md leading-loose max-w-lg'>Our diverse team delivers top-tier IT solutions with a local touch, ensuring every project aligns perfectly with your goals.</p>
+                    <p className='text-white font-bold text-base md:text-lg leading-none md:leading-loose'>Unlock world-class IT solutions tailored to your business needs.</p>
+                    <p className='text-white/50 text-sm md:text-md leading-none md:leading-loose max-w-lg'>Our diverse team delivers top-tier IT solutions with a local touch, ensuring every project aligns perfectly with your goals.</p>
                     {/* Loop through tabs */}
                     <div className="flex flex-col md:flex-row gap-2 mt-4">
                         {tabs.map((tab, index) => (
@@ -43,6 +45,10 @@ export default function page() {
                 </div>
                 <RetroGrid />
             </div>
+            <div className='py-10'>
+                <ServicesTrace/>
+            </div>
+            <Footer/>
         </section>
     )
 }
