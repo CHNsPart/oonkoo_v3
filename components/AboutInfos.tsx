@@ -45,8 +45,8 @@ export async function AboutInfos() {
 						Designed with{" "}
 						<span className="font-semibold text-primary">scalability</span> in
 						mind, ensuring that the{" "}
-						<span className="font-semibold text-primary">backend</span> can grow
-						with your application's needs.
+						<span className="font-semibold text-primary">backend</span> {`can grow
+						with your application's needs.`}
 					</p>
 				</div>
 			</BoxReveal>
