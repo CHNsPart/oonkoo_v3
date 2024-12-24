@@ -1,68 +1,21 @@
-import BoxReveal from "@/components/magicui/box-reveal";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ShimmerButton from "./magicui/shimmer-button";
 
 export async function AboutInfos() {
 	return (
-		<div className="h-full w-full max-w-[32rem] items-center justify-center overflow-hidden pt-8 text-white text-center">
-			<BoxReveal boxColor={"hsl(var(--primary)"} duration={0.5}>
-				<p className="text-[3.5rem] font-semibold text-center">
-					About Us<span className="text-primary">.</span>
-				</p>
-			</BoxReveal>
-
-			<BoxReveal boxColor={"hsl(var(--primary)"} duration={0.5}>
-				<h2 className="mt-[.5rem] text-[1rem]">
-					One-stop solution for{" "}
-					<span className="text-primary">Tech Products</span>
-				</h2>
-			</BoxReveal>
-
-			<BoxReveal boxColor={"hsl(var(--primary)"} duration={0.5}>
-				<div className="mt-[1.5rem] text-left">
-					<p>
-						-&gt; 20+ tech solutions built with
-						<span className="font-semibold text-primary"> Next.Js</span>,
-						<span className="font-semibold text-primary"> Typescript</span>,
-						<span className="font-semibold text-primary"> Tailwind CSS</span>,
-						<span className="font-semibold text-primary">
-							{" "}
-							Custom and Scalable backend
-						</span>
-						, and
-						<span className="font-semibold text-primary"> Framer Motion</span>.
-						<br />
-						-&gt;
-						<span className="font-semibold text-primary">
-							Fully Responsive{" "}
-						</span>
-						and
-						<span className="font-semibold text-primary"> Optimized </span>
-						for performance across all devices, ensuring a seamless user
-						experience. <br />
-						<br />
-						Designed with{" "}
-						<span className="font-semibold text-primary">scalability</span> in
-						mind, ensuring that the{" "}
-						<span className="font-semibold text-primary">backend</span> {`can grow
-						with your application's needs.`}
+		<div className="min-h-screen w-full items-center justify-center overflow-hidden text-white text-center">
+			<div className='flex flex-col justify-start'>
+				<div className="max-w-4xl mt-8">
+					<p className="mt-4 text-lg text-muted-foreground">
+						Welcome to our company! We are dedicated to providing the best service possible. Our team is composed of experienced professionals who are passionate about what they do. We believe in innovation, integrity, and excellence. Thank you for choosing us!
 					</p>
 				</div>
-			</BoxReveal>
-
-			<BoxReveal boxColor={"hsl(var(--primary)"} duration={0.5}>
-				<Link
-					href="/contact"
-					className="w-full flex justify-center items-center"
-				>
-					<ShimmerButton className="shadow-2xl mt-[1.5rem]">
-						<span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-							Get in touch
-						</span>
-					</ShimmerButton>
-				</Link>
-			</BoxReveal>
+				<div className="mt-8">
+					<Link target='_blank' href={"#tally-open=mKo7kz&tally-hide-title=1&tally-emoji-text=👽&tally-emoji-animation=bounce"} className="px-4 py-2 transition-all ease-in duration-200 cursor-pointer backdrop-blur-sm border bg-emerald-300/10 hover:bg-emerald-300/30 border-emerald-500/20 text-white text-center rounded-full relative">
+						<span>{"Let's Have a Chat →"}</span>
+						<div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 }

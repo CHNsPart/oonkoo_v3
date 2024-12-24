@@ -3,38 +3,67 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import Particles from "@/components/magicui/particles";
 import SparklesText from "@/components/magicui/sparkles-text";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import {
-	IconBrandFigma,
-	IconBrandFramerMotion,
-	IconBrandMongodb,
-	IconBrandNextjs,
-	IconBrandPrisma,
-	IconBrandPython,
-	IconBrandReact,
-	IconBrandStripe,
-	IconBrandTailwind,
-	IconBrandTypescript,
-	IconFileSpreadsheet,
-	IconHome,
-	IconLink,
-	IconXd,
+  IconBrandFigma, IconBrandFramerMotion, IconBrandMongodb, IconBrandNextjs,
+  IconBrandPrisma, IconBrandPython, IconBrandReact, IconBrandStripe,
+  IconBrandTailwind, IconBrandTypescript, IconFileSpreadsheet, IconLink, IconXd,
+  IconFilter
 } from "@tabler/icons-react";
+import Footer from "@/components/Footer";
 
-const Projects = () => {
-	const { theme } = useTheme();
-	const [color, setColor] = useState("#ffffff");
+const ProjectsPage = () => {
+  const { theme } = useTheme();
+  const [color, setColor] = useState("#ffffff");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
-	useEffect(() => {
-		setColor(theme === "dark" ? "#ffffff" : "#ffffff");
-	}, [theme]);
+  useEffect(() => {
+    setColor(theme === "dark" ? "#ffffff" : "#ffffff");
+    setIsVisible(true);
+  }, [theme]);
 
+  // Your existing projects array here
 	const projects = [
+		{
+			title: "WhoWorksWhen",
+			link: "https://whoworkswhen.com/",
+			category: "saas",
+			icons: [
+				<IconBrandNextjs
+					key="icon1"
+					className="size-6 text-white rounded-full"
+				/>,
+				<IconBrandTypescript
+					key="icon0"
+					className="size-6 text-white rounded-full"
+				/>,
+				<IconBrandTailwind
+					key="icon2"
+					className="size-6 text-white rounded-full"
+				/>,
+				<IconXd key="icon4" className="size-6 text-white rounded-full" />,
+				<IconBrandStripe
+					key="icon8"
+					className="size-6 text-white rounded-full"
+				/>,
+				<IconBrandPrisma
+					key="icon10"
+					className="size-6 text-white rounded-full"
+				/>,
+				<IconBrandFramerMotion
+					key="icon4"
+					className="size-6 text-white rounded-full"
+				/>,
+			],
+			thumbnail: "/projects/www.png",
+		},
 		{
 			title: "GTA Group",
 			link: "https://gta-group.pages.dev/",
@@ -374,103 +403,182 @@ const Projects = () => {
 		},
 	];
 
-	return (
-		<section className="min-h-screen w-full bg-[#1F1C1C] relative flex flex-col items-center justify-start antialiased p-0 md:p-10">
-			<Navbar />
-			<div className="w-full h-full flex flex-col lg:flex-row justify-around items-center px-10 pt-32 lg:pt-12 z-50">
-				<div className="flex flex-col gap-2 justify-center items-center lg:items-start w-fit">
-					<SparklesText
-						className="text-center lg:max-w-md lg:text-left"
-						text="Our Pinnacle Projects"
-					/>
-					<p className="max-w-lg text-white/50 pl-2 lg:pl-0 text-center lg:text-left">
-						At OonkoO, we are dedicated to transforming visions into reality
-						through our diverse and impactful projects. Our expert team
-						leverages the latest technologies to create innovative solutions
-						that meet real-world needs. Explore our portfolio to witness our
-						commitment to excellence and the passion that drives our work.
-					</p>
-				</div>
-				<div className="h-[40rem] w-fit flex items-center justify-center">
-					<PinContainer
-						title="Tweet OonkoO"
-						href="https://twitter.com/oonkoohq"
-					>
-						<div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2 w-[20rem] h-[20rem] ">
-							<h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-white">
-								OonkoO
-							</h3>
-							<div className="text-base !m-0 !p-0 font-normal">
-								<span className="text-white/50 ">
-									We build beautiful products with the latest technologies and
-									frameworks. We are a team of passionate developers and
-									designers that love to build amazing products.
-								</span>
-							</div>
-							<Image
-								className="flex flex-1 w-full rounded-lg mt-4"
-								src={"/oonkoo_logo_b.svg"}
-								height={50}
-								width={50}
-								alt="logo"
-							/>
-						</div>
-					</PinContainer>
-				</div>
-			</div>
+  const categories = ["all", "saas", "e-commerce", "ui/ux design", "web application"];
 
-			<div className="w-full flex flex-wrap justify-around items-center z-50">
-				{projects.map((project, index) => (
-					<div
-						key={project.title}
-						className="h-[20rem] md:h-[40rem] relative flex flex-col mt-2 items-start justify-center m-4"
-					>
-						<DirectionAwareHover imageUrl={project.thumbnail}>
-							<a href={project.link} target="_blank" rel="noopener noreferrer">
-								<p className="font-bold text-xl flex items-center gap-2">
-									<IconLink className="size-6 text-white rounded-full" />{" "}
-									{project.title}
-								</p>
-								<p className="font-medium text-lg">{project.category}</p>
-								<div className="flex gap-2">
-									{project.icons.map((icon, idx) => (
-										<span key={icon.key}>{icon}</span>
-									))}
-								</div>
-							</a>
-						</DirectionAwareHover>
-						<a
-							href={project.link}
-							className="block text-white md:hidden pt-2"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<p className="font-bold text-xl flex items-center gap-2">
-								<IconLink className="size-6 text-white rounded-full" />{" "}
-								{project.title}
-							</p>
-							<p className="font-medium text-lg text-primary">
-								{project.category}
-							</p>
-							<div className="flex gap-2">
-								{project.icons.map((icon, idx) => (
-									<span key={icon.key}>{icon}</span>
-								))}
-							</div>
-						</a>
-					</div>
-				))}
-			</div>
+  const filteredProjects = projects.filter(project => {
+    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
-			<Particles
-				className="absolute inset-0"
-				quantity={100}
-				ease={80}
-				color={color}
-				refresh
-			/>
-		</section>
-	);
+  // Get featured project (first SAAS project)
+  const featuredProject = projects.find(project => project.category === "saas");
+
+  const CategoryButton = ({ category }: { category: string }) => (
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => setSelectedCategory(category)}
+      className={`px-4 py-2 rounded-full text-sm font-medium transition-all
+        ${selectedCategory === category 
+          ? 'bg-primary text-white' 
+          : 'bg-white/5 text-white/70 hover:bg-white/10'
+        }`}
+    >
+      {category.charAt(0).toUpperCase() + category.slice(1)}
+    </motion.button>
+  );
+
+  const ProjectCard = ({ project }: { project: any }) => (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="h-[20rem] md:h-[40rem] relative flex flex-col items-start justify-center m-4 transition-all duration-500"
+    >
+      <DirectionAwareHover imageUrl={project.thumbnail}>
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <p className="font-bold text-xl flex items-center gap-2">
+              <IconLink className="size-6 text-white rounded-full" />
+              {project.title}
+            </p>
+            <p className="font-medium text-lg">{project.category}</p>
+            <div className="flex gap-2 mt-2">
+              {project.icons.map((icon:any, idx:any) => (
+                <motion.span
+                  key={icon.key}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * idx }}
+                >
+                  {icon}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+        </a>
+      </DirectionAwareHover>
+    </motion.div>
+  );
+
+  return (
+    <section className="min-h-screen w-full bg-[#1F1C1C] relative flex flex-col items-center justify-start antialiased p-0 md:p-10">
+      <Navbar />
+
+      {/* Hero Section with Featured Project */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full h-full flex flex-col lg:flex-row justify-around items-center px-10 pt-32 lg:pt-24 z-50 relative"
+      >
+        <div className="flex flex-col gap-4 justify-center items-center lg:items-start w-full lg:w-1/2">
+          <SparklesText
+            text="Our Pinnacle Projects"
+            className="text-center lg:text-left text-4xl md:text-6xl"
+          />
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-white/60 text-lg text-center lg:text-left"
+          >
+            Discover our portfolio of innovative solutions that transform visions into reality.
+            Each project represents our commitment to excellence and passion for cutting-edge technology.
+          </motion.p>
+
+          {/* Search and Categories */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6 }}
+            className="w-full max-w-md"
+          >
+            <input
+              type="text"
+              placeholder="Search projects..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg 
+                text-white placeholder-white/40 focus:outline-none focus:border-primary/50
+                transition-all duration-300"
+            />
+          </motion.div>
+
+          {/* Categories */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="flex flex-wrap gap-2 mt-4"
+          >
+            {categories.map((category) => (
+              <CategoryButton key={category} category={category} />
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Featured Project in PinContainer */}
+        {featuredProject && (
+          <div className="lg:w-1/2 mt-8 lg:mt-0">
+            <PinContainer
+              title={featuredProject.title}
+              href={featuredProject.link}
+            >
+              <div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2 w-[20rem] h-[20rem]">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-white">
+                  Featured Project
+                </h3>
+                <div className="text-base !m-0 !p-0 font-normal">
+                  <span className="text-white/50">
+                    {featuredProject.category}
+                  </span>
+                </div>
+                <Image
+                  className="flex flex-1 w-full rounded-lg mt-4 object-cover"
+                  src={featuredProject.thumbnail}
+                  height={200}
+                  width={200}
+                  alt={featuredProject.title}
+                />
+              </div>
+            </PinContainer>
+          </div>
+        )}
+      </motion.div>
+
+      {/* Projects Grid */}
+      <motion.div
+        layout
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8 relative z-50"
+      >
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Background Effects */}
+      <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color={color}
+        refresh
+      />
+			<div className="w-full mt-32">
+				<Footer/>
+			</div>
+    </section>
+  );
 };
 
-export default Projects;
+export default ProjectsPage;
